@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ask the Site AI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- import map for future libs (kept minimal) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "websim": "/websim-shim.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <main class="container">
+    <h1>Site AI — Most Recent Game</h1>
+
+    <div class="card">
+      <p class="hint">Ask the embedded AI what is the most recent game it knows about.</p>
+
+      <div class="controls">
+        <select id="gameScope">
+          <option value="global">Global (all platforms)</option>
+          <option value="pc">PC only</option>
+          <option value="console">Console only</option>
+          <option value="mobile">Mobile only</option>
+        </select>
+        <button id="askBtn">Ask AI</button>
+      </div>
+
+      <div id="result" class="result empty">
+        <div class="loader" id="loader" hidden></div>
+        <div id="content"></div>
+      </div>
+
+      <footer class="meta">
+        <small>Answers come from the site's embedded assistant model and reflect its latest knowledge cutoff.</small>
+      </footer>
+    </div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
